@@ -1,0 +1,34 @@
+# CMD do Windows
+# Definindo diretório onde deve ser criado o projeto
+
+cd C:\'caminho do diretório'
+
+# Criando um projeto
+# 'mysite' É o nome para o projeto
+
+django-admin.py startproject mysite
+
+# Para criar a aplicação é necessário entrar no diretório do projeto
+
+cd mysite
+
+# Antes de criar a aplicação é necessário abrir o arquivo urls.py dentro da pasta do projeto mysite/urls.py
+# descomentar as linhas abaixo.
+# from django.contrib import admin
+# admin.autodiscover()
+# url(r'^admin/', include(admin.site.urls)),
+
+# Criando a aplicação
+# A aplicação deve ser criada dentro da pasta do projeto, no caso, dentro de mysite onde se encontra o arquivo manage.py
+
+python manage.py startapp agenda
+
+# Depois da aplicação criada, a sua implementação será possível através do arquivo models.py
+# Após alterações realizadas no arquivo models.py deve ser adicionado um arquivo chamado admin.py no diretório da aplicação
+# Feito isto, o banco de dados necessita sincronizar com a aplicação
+
+python manage.py syncdb
+
+# E enfim, Rodar o servidor
+
+python manage.py runserver
