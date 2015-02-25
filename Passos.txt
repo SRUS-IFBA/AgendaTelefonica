@@ -32,3 +32,5 @@ python manage.py syncdb
 # E enfim, Rodar o servidor
 
 python manage.py runserver
+
+# Acesse localhost:8000/admin no seu navegador
