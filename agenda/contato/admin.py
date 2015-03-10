@@ -1,4 +1,4 @@
-from agenda.models import Contato, Telefone
+from contato.models import Contato, Telefone
 from django.contrib import admin
 
 class TelefoneInline(admin.TabularInline):
@@ -7,8 +7,12 @@ class TelefoneInline(admin.TabularInline):
 	
 class ContatoAdmin(admin.ModelAdmin):
     model = Contato
-    list_display = ['contato_nome','contato_sobrenome','contato_email']
+    list_display = ['contato_nome', 'contato_email']
     search_fields = ['contato_nome']
     inlines = [TelefoneInline]
     save_on_top = True
 admin.site.register(Contato, ContatoAdmin)
+	
+	
+
+

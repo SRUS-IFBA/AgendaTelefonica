@@ -1,9 +1,9 @@
 from django.db import models
 
+# Create your models here.
 class Contato(models.Model):
 	contato_id = models.AutoField(primary_key = True)
 	contato_nome = models.CharField(max_length=45, verbose_name = 'Nome')
-	contato_sobrenome = models.CharField(max_length=45, verbose_name = 'Sobrenome')
 	contato_email = models.EmailField(max_length=255, blank=True, verbose_name='Email')
 	
 	def __unicode__(self):
